@@ -1,3 +1,9 @@
-t {
-    color: blue
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.display{
+    border: 2px solid red;
+    align-self: baseline;
 }
