@@ -36,7 +36,17 @@ const operate = function (num1, operator, num2) {
     } else return "No Operator";
 };
 
-//Updating display with selected buttons
+//Setting operator
+const operatorButtons= document.querySelectorAll(".operatorButton");
+let selectedOperator = "";
+operatorButtons.forEach(operatorButton => {
+    operatorButton.addEventListener('click', function() {
+        selectedOperator = this.value;
+    })
+})  
+
+
+//Updating display with numbers
 const display = document.querySelector(".display");
 const numberButtons = document.querySelectorAll(".numberButton");
 let currentDisplay = "";
