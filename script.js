@@ -37,12 +37,12 @@ const operate = function (num1, operator, num2) {
 };
 
 //Updating display with selected buttons
-const display = document.querySelector(".display")
-const buttons = document.querySelectorAll("button");
+const display = document.querySelector(".display");
+const numberButtons = document.querySelectorAll(".numberButton");
 let currentDisplay = "";
-buttons.forEach((button) =>
-    button.addEventListener("click", (e) => {
-        currentDisplay += e.target.id;
+numberButtons.forEach((numberButton) =>
+    numberButton.addEventListener("click", () => {
+        currentDisplay += numberButton.textContent;
         display.textContent = currentDisplay;
     })
 );
