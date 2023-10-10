@@ -25,13 +25,13 @@ const num2 = undefined;
 const operator = undefined;
 
 const operate = function (num1, operator, num2) {
-    if (operator == add) {
+    if (operator == "add") {
         return add(num1, num2);
-    } else if (operator == subtract) {
+    } else if (operator == "subtract") {
         return subtract(num1, num2);
-    } else if (operator == multiply) {
+    } else if (operator == "multiply") {
         return multiply(num1, num2);
-    } else if (operator == divide) {
+    } else if (operator == "divide") {
         return divide(num1, num2);
     } else return "No Operator";
 };
@@ -50,7 +50,7 @@ numberButtons.forEach((numberButton) =>
 );
 
 //Setting operator and first number
-const operatorButtons= document.querySelectorAll(".operatorButton");
+const operatorButtons = document.querySelectorAll(".operatorButton");
 let selectedOperator = "";
 let firstNumber = "";
 
@@ -64,4 +64,10 @@ operatorButtons.forEach(operatorButton => {
     })
 })  
 
-
+//Enter button function
+const enterButton = document.querySelector("#enter")
+let newTotal = "";
+enterButton.addEventListener('click', function() {
+    newTotal = (operate(firstNumber, selectedOperator, currentDisplay));
+    display.textContent = Math.round(newTotal * 1000) / 1000;
+})
