@@ -49,7 +49,7 @@ numberButtons.forEach((numberButton) =>
     })
 );
 
-//Setting operator
+//Setting operator and first number
 const operatorButtons= document.querySelectorAll(".operatorButton");
 let selectedOperator = "";
 let firstNumber = "";
@@ -64,4 +64,4 @@ operatorButtons.forEach(operatorButton => {
     })
 })  
 
-//Setting first number
+
