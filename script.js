@@ -15,8 +15,12 @@ const multiply = function (a, b) {
 };
 
 const divide = function (a, b) {
+    if (b == 0) {
+        alert("What are you trying to do, rip a hole in the space-time continuum???")
+    }
     let total = a / b;
     return total;
+
 };
 
 //Main operator function
@@ -33,7 +37,8 @@ const operate = function (num1, operator, num2) {
         return multiply(num1, num2);
     } else if (operator == "divide") {
         return divide(num1, num2);
-    } else return "No Operator";
+    } 
+    else alert("No Operator Selected");
 };
 
 
