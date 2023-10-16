@@ -1,6 +1,6 @@
 //Basic Math operators
 const add = function (a, b) {
-    let total = a + b;
+    let total = (+a) + (+b);
     return total;
 };
 
@@ -45,7 +45,6 @@ numberButtons.forEach((numberButton) =>
     numberButton.addEventListener("click", () => {
         currentDisplay += numberButton.textContent;
         display.textContent = currentDisplay;
-
     })
 );
 
@@ -60,7 +59,7 @@ operatorButtons.forEach(operatorButton => {
         if (currentDisplay !== "") {
             firstNumber = currentDisplay;
             currentDisplay = "";
-        }
+        } 
     })
 })  
 
@@ -70,4 +69,5 @@ let newTotal = "";
 enterButton.addEventListener('click', function() {
     newTotal = (operate(firstNumber, selectedOperator, currentDisplay));
     display.textContent = Math.round(newTotal * 1000) / 1000;
+    currentDisplay = newTotal;
 })
