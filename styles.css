@@ -37,3 +37,9 @@ button {
     writing-mode: vertical-rl;
     text-orientation: upright;
 }
+
+.calculatorContainer {
+    border: 2px solid grey;
+    padding: 12px;
+    border-radius: 5%;
+}

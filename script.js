@@ -18,8 +18,10 @@ const divide = function (a, b) {
     if (b == 0) {
         alert("What are you trying to do, rip a hole in the space-time continuum???")
     }
-    let total = a / b;
-    return total;
+    else {
+        let total = a / b;
+        return total;
+    }
 
 };
 
