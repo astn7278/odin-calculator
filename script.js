@@ -62,11 +62,17 @@ let firstNumber = "";
 
 operatorButtons.forEach(operatorButton => {
     operatorButton.addEventListener('click', function() {
-        selectedOperator = this.value;
-        if (currentDisplay !== "") {
+        if (currentDisplay !== "" && selectedOperator == "") {
+            selectedOperator = this.value;
             firstNumber = currentDisplay;
             currentDisplay = "";
         } 
+        else if (selectedOperator !== "") {
+            newTotal = (operate(firstNumber, selectedOperator, currentDisplay));
+            selectedOperator = this.value;
+            firstNumber = newTotal;
+            currentDisplay = "";
+        }
     })
 })  
 
@@ -77,4 +83,7 @@ enterButton.addEventListener('click', function() {
     newTotal = (operate(firstNumber, selectedOperator, currentDisplay));
     display.textContent = Math.round(newTotal * 1000) / 1000;
     currentDisplay = newTotal;
+    if (newTotal !== "NaN") {
+        display.textContent = "OOPS"
+    }
 })
