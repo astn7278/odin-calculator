@@ -40,8 +40,15 @@ const operate = function (num1, operator, num2) {
     } else if (operator == "divide") {
         return divide(num1, num2);
     } 
-    else alert("No Operator Selected");
+    else {
+        setTimeout(function() {
+            alert("No Operator Selected");
+            display.textContent = "Err";
+            currentDisplay = "";
+        }, 0);
+
 };
+}
 
 
 //Updating display with numbers
