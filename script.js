@@ -86,3 +86,14 @@ enterButton.addEventListener('click', function() {
     currentDisplay = newTotal;
     selectedOperator = "";
 })
+
+//Clear button function
+const clearButton = document.querySelector("#clear")
+clearButton.addEventListener('click', function() {
+    newTotal = "";
+    selectedOperator = "";
+    firstNumber = "";
+    selectedOperator = "";
+    currentDisplay = "";
+    display.textContent = "Clear"
+})
