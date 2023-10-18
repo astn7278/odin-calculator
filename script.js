@@ -55,7 +55,7 @@ numberButtons.forEach((numberButton) =>
     })
 );
 
-//Setting operator and first number
+//Setting operator and first number 
 const operatorButtons = document.querySelectorAll(".operatorButton");
 let selectedOperator = "";
 let firstNumber = "";
@@ -67,6 +67,7 @@ operatorButtons.forEach(operatorButton => {
             firstNumber = currentDisplay;
             currentDisplay = "";
         } 
+//Logic for multiple operations
         else if (selectedOperator !== "") {
             newTotal = (operate(firstNumber, selectedOperator, currentDisplay));
             selectedOperator = this.value;
@@ -83,7 +84,5 @@ enterButton.addEventListener('click', function() {
     newTotal = (operate(firstNumber, selectedOperator, currentDisplay));
     display.textContent = Math.round(newTotal * 1000) / 1000;
     currentDisplay = newTotal;
-    if (newTotal !== "NaN") {
-        display.textContent = "OOPS"
-    }
+    selectedOperator = "";
 })
