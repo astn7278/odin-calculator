@@ -16,7 +16,11 @@ const multiply = function (a, b) {
 
 const divide = function (a, b) {
     if (b == 0) {
-        alert("What are you trying to do, rip a hole in the space-time continuum???")
+        setTimeout(function() {
+            alert("What are you trying to do, rip a hole in the space-time continuum???");
+            display.textContent = "Err";
+            currentDisplay = "";
+        }, 0);
     }
     else {
         let total = a / b;
