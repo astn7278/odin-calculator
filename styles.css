@@ -1,13 +1,18 @@
 body {
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    align-items: center;
+    font-family: 'Kanit', sans-serif;
+    background-color: #eeeee4;
+
 }
 
 .display{
     border: 2px solid rgb(99, 99, 99);
-    align-self: baseline;
+    text-align: right;
     font-size: 48px;
+    background-color: white;
+    color: black
 }
 
 .buttons {
@@ -21,6 +26,9 @@ button {
     font-size: 25px;
     height: 50px;
     width: 50px;
+    background-color: #76b5c5;
+    font-family: 'Kanit', sans-serif;
+    color: white;
 }
 
 #enter {
@@ -28,8 +36,9 @@ button {
     height: 100px;
     writing-mode: vertical-rl;
     text-orientation: upright;
-    letter-spacing: -2px;
-    margin-top: -5px;
+    letter-spacing: -5px;
+    margin-top: -6px;
+
 }
 
 .addButton {
@@ -42,4 +51,5 @@ button {
     border: 2px solid grey;
     padding: 12px;
     border-radius: 5%;
+    background-color: #abdbe3;
 }
