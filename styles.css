@@ -31,6 +31,11 @@ button {
     color: white;
 }
 
+.operatorButton {
+    font-size: 30px;
+
+}
+
 #enter {
     font-size: 14px;
     height: 100px;
